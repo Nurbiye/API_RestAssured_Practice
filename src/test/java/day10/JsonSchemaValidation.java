@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import testBase.SpartanAdminTestBase;
 
 import static io.restassured.RestAssured.*;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class JsonSchemaValidation extends SpartanAdminTestBase {
 
@@ -12,13 +13,15 @@ public class JsonSchemaValidation extends SpartanAdminTestBase {
     @Test
     public void testGetSingleSpartanSchema(){
 
-//        given()
-//                .spec(adminReqSpec)
-//                .pathParam("id",34).
-//        when()
-//                .get("/spartans/{id}").
-//        then()
-//                .
+        given()
+                .spec(adminReqSpec)
+                .pathParam("id",34).
+                when()
+                .get("/spartans/{id}").
+                then()
+                .log().body()
+                .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("singleSpartanSchema.json") ) ;
 
 
 

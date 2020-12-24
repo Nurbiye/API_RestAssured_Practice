@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.* ;
 
 
 
-public class SpartanUpdatingTest {
+public class SpartanUpdatingTest_PUT_Patch_Delete {
 
     @BeforeAll
     public static void setUp(){

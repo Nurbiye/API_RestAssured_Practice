@@ -57,4 +57,11 @@ public class CreatePostRequest extends SpartanAdminTestBase {
 
 }
 
+
+
+//and also can add external file:
+    //  File externalFile = new File("(external file pathName");
+   // given().auth.basic("").body(externalFile)
+    //---> other part is similar
+
 }
